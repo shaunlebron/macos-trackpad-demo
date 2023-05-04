@@ -1,11 +1,20 @@
 # macOS Trackpad Demo
 
-I’m new to macOS development, and I had a lot of trouble figuring out how to
-access raw touch points and draw them to screen.
+_Draw raw touch points from macOS trackpad, using Storyboard and Swift._
 
-This is the Swift project file of what I was able to cobble together.  Open in Xcode.
+https://user-images.githubusercontent.com/116838/236108497-ed2543de-623c-4200-8dbb-54a3ba901f61.mp4
 
-## References
+## Building
 
-* https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/HandlingTouchEvents/HandlingTouchEvents.html
-* I primarily used GitHub’s code search and stackoverflow to find usage examples of Apple’s API functions
+Open `TrackpadDemo.xcodeproj/` in Xcode and from the menu click Project > Run.
+
+(I’m using Xcode 14.2)
+
+## Notes
+
+I’m very new to macOS development, so pull requests and issues are welcome. I
+had a lot of trouble figuring out how to put this together, but I primarily
+used GitHub’s code search and stackoverflow to find usage examples of Apple’s
+API functions that were mentioned here:
+
+https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/HandlingTouchEvents/HandlingTouchEvents.html
