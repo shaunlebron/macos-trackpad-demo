@@ -1,6 +1,6 @@
 # macOS Trackpad Demo
 
-_Draw raw touch points from macOS trackpad, using Storyboard and Swift._
+_Show raw touch points from macOS trackpad, using Storyboard and Swift._
 
 https://user-images.githubusercontent.com/116838/236108497-ed2543de-623c-4200-8dbb-54a3ba901f61.mp4
 
