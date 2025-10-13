@@ -80,3 +80,16 @@ Then we move the cursor inside the window with the `NSWindowController` focus ev
 * `windowDidBecomeKey`: called when window gains focus
 * `windowDidResignKey`: called when window loses focus
 * `CGWarpMouseCursorPosition(globalPoint)`: set cursor position
+
+## Apple’s private API for touch
+
+macOS has a private API `/System/Library/PrivateFrameworks/MultitouchSupport.framework/` for accessing raw touch points,
+but apps published on Mac App Store must enable [App Sandbox], preventing access to private APIs. For example, it is used by [AudioSwift].
+
+Code examples for using MultitouchSupport.framework:
+
+- https://github.com/Kyome22/OpenMultitouchSupport
+- https://gist.github.com/rmhsilva/61cc45587ed34707da34818a76476e11
+
+[App Sandbox]:https://developer.apple.com/documentation/security/app-sandbox
+[AudioSwift]:https://audioswiftapp.com
