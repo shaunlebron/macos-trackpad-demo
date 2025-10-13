@@ -41,6 +41,27 @@ Some special things I handle with the events:
 * Sometimes we aren’t notified when touches go stale, so there’s some ceremony I wrote to remove them.
 * Touch identifiers are long numbers, so I associate it with a smaller number, using an index which counts up from zero, and resets when all touch points disappear.
 
+## Prevent loss of Touch events after waking from sleep
+
+Touch events will stop firing after system goes to sleep, so you have to register an `onWakeNote` method on your `NSView` on init:
+
+```swift
+NSWorkspace.shared.notificationCenter.addObserver(
+    self,
+    selector: #selector(onWakeNote(note:)),
+    name: NSWorkspace.didWakeNotification,
+    object: nil
+)
+```
+
+```swift
+@objc func onWakeNote(note: NSNotification) {
+    DispatchQueue.main.async {
+        self.window?.makeFirstResponder(self)
+    }
+}
+```
+
 ## Cursor requirements
 
 To ensure all touch events are captured, we have to do various things to the cursor:
